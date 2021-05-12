@@ -74,9 +74,8 @@ class Country extends React.Component {
                       this.state.TLD.push(domain);
                       console.log(this.state.TLD);
                     });
-
                     return (
-                      <div className="country">
+                      <div className="country" key={Country.numericCode}>
                         <img src={Country.flag} alt="" />
                         <div className="country-details">
                           <h1>{Country.name}</h1>
