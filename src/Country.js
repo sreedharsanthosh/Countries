@@ -62,24 +62,19 @@ class Country extends React.Component {
               {this.state.country ? (
                 <div>
                   {this.state.country.map((Country) => {
-                    {
-                      Country.languages.forEach((lang) => {
-                        this.state.languages.push(lang.name);
-                        console.log(this.state.languages);
-                      });
-                    }
-                    {
-                      Country.currencies.forEach((currency) => {
-                        this.state.currencies.push(currency.name);
-                        console.log(this.state.currencies);
-                      });
-                    }
-                    {
-                      Country.topLevelDomain.forEach((domain) => {
-                        this.state.TLD.push(domain);
-                        console.log(this.state.TLD);
-                      });
-                    }
+                    Country.languages.forEach((lang) => {
+                      this.state.languages.push(lang.name);
+                      console.log(this.state.languages);
+                    });
+                    Country.currencies.forEach((currency) => {
+                      this.state.currencies.push(currency.name);
+                      console.log(this.state.currencies);
+                    });
+                    Country.topLevelDomain.forEach((domain) => {
+                      this.state.TLD.push(domain);
+                      console.log(this.state.TLD);
+                    });
+
                     return (
                       <div className="country">
                         <img src={Country.flag} alt="" />
